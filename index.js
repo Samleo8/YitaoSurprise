@@ -1,6 +1,6 @@
 // Probably wanna dynamically load everything?
 var slideIndex = 0;
-var slidesBaseClasses = "slide-container fade";
+var slidesBaseClasses = "slide-container fade ";
 
 var poem = [
     "I pray for blessings in both our lives",
@@ -9,7 +9,7 @@ var poem = [
     "With plenty of hugs to make it right.",
     "I pray for love that always lasts",
     "Our love for God to stay steadfast.",
-    "Through the ups and downs, the lows and highs",
+    "Through ups and downs, lows and highs",
     "May our lives' centers always be Christ",
     "And then God-willing, we shall spend our days",
     "Together, forever, in God's embrace."
@@ -36,7 +36,7 @@ function buildSlides(){
         poemText = poem[i];
         
         var slideContainer = document.createElement("div");
-        slideContainer.className = slidesBaseClasses + " hidden";
+        slideContainer.className = slidesBaseClasses + "hidden";
         
         var imgEle = document.createElement("img");
         imgEle.src = imgSrc;
