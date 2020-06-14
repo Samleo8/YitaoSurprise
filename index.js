@@ -6,20 +6,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
     
 // Next/previous controls
-function plusSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function plusSlide(inc) {
+    showSlides(slideIndex + inc);
 }
 
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("slide-container");
 
-    slideIndex = n % slides.length;
+    slideIndex = Math.max(0, Math.min(n, slides.length-1));
     
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
