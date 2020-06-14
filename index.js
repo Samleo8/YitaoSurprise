@@ -1,21 +1,19 @@
 // Probably wanna dynamically load everything?
 var slideIndex = 0;
+var slidesBaseClasses = "slide-container fade";
 
-var poemText = `
-I pray for blessings in both our lives
-For strength and wisdom amidst the strife.
-I pray for peace amidst the fights
-With plenty of hugs to make it right.
-I pray for love that always lasts
-Our love for God to stay steadfast.
-
-Through the ups and downs, the lows and highs
-May our lives' centers always be Christ
-And then God-willing, we shall spend our days
-Together, forever, in God's embrace.
-`;
-
-var poem = poemText.split("\n");
+var poem = [
+    "I pray for blessings in both our lives",
+    "For strength and wisdom amidst the strife.",
+    "I pray for peace amidst the fights",
+    "With plenty of hugs to make it right.",
+    "I pray for love that always lasts",
+    "Our love for God to stay steadfast.",
+    "Through the ups and downs, the lows and highs",
+    "May our lives' centers always be Christ",
+    "And then God-willing, we shall spend our days",
+    "Together, forever, in God's embrace."
+];
 
 var images = [
     "",
@@ -26,12 +24,31 @@ var images = [
 function buildSlides(){
     var container = document.getElementsByClassName("container")[0];
     for(var i = 0; i < poem.length; i++) {
+        var imgSrc;
+
         if(i >= images.length || !images[i].length){
-            img = "blank.jpg";
+            imgSrc = "images/blank.png";
         }
         else {
-            
+            imgSrc = "images/" + images[i] + ".png";
         }
+
+        poemText = poem[i];
+        
+        var slideContainer = document.createElement("div");
+        slideContainer.className = slidesBaseClasses + " hidden";
+        
+        var imgEle = document.createElement("img");
+        imgEle.src = imgSrc;
+        imgEle.alt = poemText;
+
+        var txtEle = document.createElement("div");
+        txtEle.innerText = poemText;
+        txtEle.className = "text bold";
+
+        slideContainer.appendChild(txtEle);
+        slideContainer.appendChild(imgEle);
+        container.appendChild(slideContainer);
     }
 }
 
@@ -55,7 +72,7 @@ function showSlides(n) {
 
 
     for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].className = slidesBaseClasses;
+        slides[i].className += () ? "display" : "hidden";
+
     }
-    slides[slideIndex].style.display = "block";
-}

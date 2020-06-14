@@ -101,6 +101,14 @@
   background-color: rgba(0,0,0,0.8);
 }
 
+.slide-container.display {
+    display: block;
+}
+
+.slide-container.hidden {
+    display: none;
+}
+
 /*-------ANIMATIONS-------*/
 /* Fading animation */
 .fade {
@@ -203,10 +211,6 @@ h6 {
 
 .text-center {
     text-align: center;
-}
-
-.hidden {
-    display: none;
 }
 
 a {
