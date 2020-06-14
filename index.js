@@ -16,7 +16,7 @@ var poem = [
 ];
 
 var images = [
-    "",
+    "img1",
     "",
     ""
 ];
@@ -46,8 +46,8 @@ function buildSlides(){
         txtEle.innerText = poemText;
         txtEle.className = "text bold";
 
-        slideContainer.appendChild(txtEle);
         slideContainer.appendChild(imgEle);
+        slideContainer.appendChild(txtEle);
         container.appendChild(slideContainer);
     }
 }
