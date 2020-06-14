@@ -26,7 +26,7 @@ function buildSlides(){
     for(var i = 0; i < poem.length; i++) {
         var imgSrc;
 
-        if(i >= images.length || !images[i].length){
+        if(i >= images.length || !images[i].length) {
             imgSrc = "images/blank.png";
         }
         else {
@@ -73,6 +73,6 @@ function showSlides(n) {
 
     for (var i = 0; i < slides.length; i++) {
         slides[i].className = slidesBaseClasses;
-        slides[i].className += () ? "display" : "hidden";
-
+        slides[i].className += ((i == slideIndex) ? "display" : "hidden");
     }
+}
