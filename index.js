@@ -95,6 +95,15 @@ document.addEventListener("DOMContentLoaded", function() {
     buildSlides();
     showSlides(slideIndex);
 });
+
+document.addEventListener("keyup", function(event){
+    if (event.keyCode == 37) {
+        plusSlide(-1);
+    }
+    else if (event.keyCode == 39) {
+        plusSlide(1);
+    }
+});
     
 // Next/previous controls
 function plusSlide(inc) {
