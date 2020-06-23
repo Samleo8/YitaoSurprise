@@ -16,7 +16,7 @@ var poem = [
     "By God's grace, our love just grew and grew...",
     "And now I can even imagine a future with you!",
     "But while I can't predict the following days,",
-    "One thing I know: and that's to pray:",
+    "One thing I know - and that's to pray:",
     "I pray for blessings in both our lives",
     "For strength and wisdom amidst the strife.",
     "I pray for peace amidst the fights",
@@ -52,7 +52,7 @@ var images = [
     "pray",
     "upsanddowns",
     "cross",
-    "",
+    "penguintgt",
     "hugs2"
 ];
 
