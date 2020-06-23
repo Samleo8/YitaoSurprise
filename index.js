@@ -3,6 +3,20 @@ var slideIndex = 0;
 var slidesBaseClasses = "slide-container fade ";
 
 var poem = [
+    "Here's the sonnet I've always owed you!\nClick the left and right buttons to continue!",
+    "A lonely boi at CMU",
+    "Until the day I found out you:",
+    "A Christian girl, with heart so kind",
+    "A love for God that's hard to find!",
+    "Not the prettiest, a little blur",
+    "But the girl I love - that's for sure <3",
+    "With memories forged through food and hugs",
+    "And stressful studying and computer bugs",
+    // TODO: More verses
+    "By God's grace, our love just grew and grew...",
+    "And now I can even imagine a future with you!",
+    "But while I can't predict the following days,",
+    "One thing I know: and that's to pray:",
     "I pray for blessings in both our lives",
     "For strength and wisdom amidst the strife.",
     "I pray for peace amidst the fights",
@@ -16,9 +30,30 @@ var poem = [
 ];
 
 var images = [
-    "img1",
+    "happybirthday",
+    "lonelyboi",
+    "yitaocute",
+    "kindpenguin",
+    "glassesyitao",
+    "actblur",
+    "cutetgt",
+    "classyitao",
+    "computerbugs",
+    // TODO: more verses
+    "morelove",
+    "jewel",
+    "dunno",
+    "pray", 
+    "images/blessings.gif",
+    "jiayou",
+    "peace",
+    "hugs",
+    "love2",
+    "pray",
+    "upsanddowns",
+    "cross",
     "",
-    ""
+    "hugs2"
 ];
 
 function buildSlides(){
@@ -28,6 +63,10 @@ function buildSlides(){
 
         if(i >= images.length || !images[i].length) {
             imgSrc = "images/blank.png";
+        }
+        // Full path already specified
+        else if (images[i].indexOf(".") != -1) {
+            imgSrc = images[i];
         }
         else {
             imgSrc = "images/" + images[i] + ".png";
